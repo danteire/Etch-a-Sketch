@@ -1,0 +1,39 @@
+.app{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+    width: 900px;
+    height: 900px;
+    margin: 0;
+}
+.biggerInnerDiv{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items:center;
+    /* border: 2px;
+    border-style: solid;
+    border-color: purple; */
+    margin: 0;
+    width: 100%;
+    height: 10%;
+}
+.smallerInnerDiv{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    margin: 0;
+    width: 10%;
+    height: 100%;
+}
+/* .smallerInnerDiv:hover{
+    background-color: black;
+} */
