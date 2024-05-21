@@ -1,0 +1,1 @@
+Pioerwszy commit na otwarcie projektu
