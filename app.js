@@ -9,10 +9,19 @@ bodyPointer.appendChild(creationButton);
 
 let gridSize = Number; 
 creationButton.addEventListener("click", () =>{
- gridSize = prompt("Enter Grid Size:");
- GridCreation(gridSize);
- 
-})
+    while(true){
+       gridSize = prompt("Enter Grid Size:");
+       if(gridSize>0 && gridSize<=100){
+        break;
+       }else{
+        alert("Wrong Grid Size");
+       }
+    }
+    
+    GridCreation(gridSize);
+    
+    
+});
 
 function ScetchControl(){
     const divControl = document.querySelectorAll(".smallerInnerDiv");
@@ -41,5 +50,15 @@ function GridCreation(gridSize){
         }
     }
     ScetchControl();
+}
+
+function RemoveGrid(){
+    
+    const delNode = document.querySelectorAll(".biggerInnerDiv");
+    delNode.forEach((node)=>{
+        node.remove();
+    })
+    const appNode = document.querySelector(".app");
+    appNode.remove();
 }
 
