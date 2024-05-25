@@ -10,8 +10,10 @@ bodyPointer.appendChild(creationButton);
 let gridSize = Number; 
 creationButton.addEventListener("click", () =>{
     while(true){
+        RemoveGrid();
        gridSize = prompt("Enter Grid Size:");
        if(gridSize>0 && gridSize<=100){
+        
         break;
        }else{
         alert("Wrong Grid Size");
@@ -55,10 +57,18 @@ function GridCreation(gridSize){
 function RemoveGrid(){
     
     const delNode = document.querySelectorAll(".biggerInnerDiv");
-    delNode.forEach((node)=>{
+    if(delNode !=null){
+        delNode.forEach((node)=>{
         node.remove();
     })
+    }
+    
     const appNode = document.querySelector(".app");
-    appNode.remove();
+    if(appNode==null){
+        return;
+    }else{
+        appNode.remove();
+    }
+    
 }
 
